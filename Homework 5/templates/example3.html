@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block body_block %}
+
+<h2>Burada Tüm Kullanıcılar listeleniyor.</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Job</th>
+        <th>Age</th>
+        <th>Description</th>
+    </tr>
+    {%for user in all_users%}
+    <tr>
+        
+        <td>{{user["name"]}}</td>
+        <td>{{user["job"]}}</td>
+        <td>{{user["age"]}}</td>
+        <td>{{user["description"]}}</td>
+        
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

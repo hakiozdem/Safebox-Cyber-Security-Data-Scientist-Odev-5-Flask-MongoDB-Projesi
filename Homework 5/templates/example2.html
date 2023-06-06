@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %} Example 2 {% endblock %}
+{% block body_block %}
+
+<h2>Burada Yaşı 40tan büyük kişiler listeleniyor.</h2>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Job</th>
+        <th>Age</th>
+        <th>Description</th>
+    </tr>
+    {%for data in liste%}
+    <tr>
+        
+        <td>{{data["name"]}}</td>
+        <td>{{data["job"]}}</td>
+        <td>{{data["age"]}}</td>
+        <td>{{data["description"]}}</td>
+        
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

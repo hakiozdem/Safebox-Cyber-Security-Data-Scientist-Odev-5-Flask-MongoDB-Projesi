@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Delete User{% endblock %}
+{% block body_block %}
+    <form method="post" name="form">
+        <label for="user_id">Enter User ID<input type="text" name="user_id" id="user_id"></label>
+        
+        <input type="submit" name="submit" class="btn btn-warning" value="Delete" data-bs-toggle="modal" data-bs-target="#myModal" id="myInput">
+        <div class="modal fade" tabindex="-1" id="mymodal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Are you Sure?</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p>Are you sure you want to delete user?</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Close</button>
+                  <input type="submit" name="submit" value="Submit" id="" class="btn btn-danger">
+                </div>
+              </div>
+            </div>
+          </div>
+    </form>
+
+    
+{% endblock %}

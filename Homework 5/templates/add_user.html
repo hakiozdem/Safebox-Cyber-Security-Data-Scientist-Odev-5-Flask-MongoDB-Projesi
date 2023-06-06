@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block title %}Add User{% endblock %}
+{% block body_block %}
+<div class="container">
+
+    <h1>Add User</h1>
+
+    <form method="POST" id="form">
+        <div class="field">
+            <label for="name">Name Surname: </label>
+            <div class="control">
+                <input type="text" id="name" name="namee" class="input" placeholder="Ex: Name Surname">
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="job">Job: </label>
+            <div class="control">
+                <input type="text" id="job" name="jobb" class="input" placeholder="Ex: Software Developer">
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="age">Age: </label>
+            <div class="control">
+                <input type="text" id="age" name="agee" class="input" placeholder="Ex: 23">
+            </div>
+        </div>
+        <br>
+        <input type="submit" class="btn btn-primary" value="Submit">
+    </form>
+    {% for message in get_flashed_messages() %}
+    <div class="alert alert-info" role="alert">
+        {{message}}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+    {% endfor %}
+</div>
+{% endblock %}
